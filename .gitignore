@@ -8,5 +8,5 @@ replit.nix
 poetry.lock
 .breakpoints
 pyproject.toml
-replit_zip_error_log.txt
 .gitattributes
+replit_zip_error_log.txt
