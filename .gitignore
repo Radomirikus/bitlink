@@ -1,6 +1,6 @@
 .upm
 .env
-.venv
+venv
 .cache
 .replit
 .config
