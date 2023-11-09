@@ -47,13 +47,12 @@ def main():
     parser = argparse.ArgumentParser(description='Делает ссылку короче и считает количество кликов')
     parser.add_argument('link', help=('Суда нада писат сылку катарую вы хатите сакратит'))
     args = parser.parse_args()
-    link = args.link
     bitly_token = os.getenv("BITLY_TOKEN")
     try:
-        if is_bitlink(link, bitly_token):
-            print("По вашей ссылке прошли:", count_clicks(bitly_token, link), "раз(а)")
+        if is_bitlink(args.link, bitly_token):
+            print("По вашей ссылке прошли:", count_clicks(bitly_token, args.link), "раз(а)")
         else:
-            bitlink = shorten_link(bitly_token, link)
+            bitlink = shorten_link(bitly_token, args.link)
             print("Битлинк: ", bitlink)
         
     except requests.exceptions.HTTPError:
